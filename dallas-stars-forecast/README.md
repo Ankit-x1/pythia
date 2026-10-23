@@ -132,14 +132,11 @@ are third-party content — do not republish the cached snapshots without checki
 `data/raw/` is excluded from the repository for that reason and can be regenerated
 with `python -m stars_forecast collect-data`.
 
-
 ## Status
 
 Complete: data collection, validation, model, all four scenario families, 10,000-season runs,
 figures, backtest, QA suite, CLI, data report.
 
-Not built yet (awaiting owner approval): the final academic report (PDF) and the class
-presentation (PPTX). The data and numbers they need are already generated.
 
 ## Limitations
 
