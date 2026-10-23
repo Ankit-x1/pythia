@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Raw third-party source snapshots: regenerable with `python -m stars_forecast collect-data`.
+# Excluded because redistributing NHL / Hockey-Reference content publicly is a licensing question.
+data/raw/
+
+# OS noise
+.DS_Store
+Thumbs.db
