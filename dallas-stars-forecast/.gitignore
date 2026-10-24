@@ -22,13 +22,3 @@ Thumbs.db
 AGENTS.md
 docs/progress.md
 
-# Scratch data probes (superseded by src/stars_forecast/collect.py)
-probe/
-
-# Graphify tool working files (only graph.html, report.md and graph,json are shared)
-graphify-out/cache/
-graphify-out/memory/
-graphify-out/reflections/
-graphify-out/.graphify_*.json
-graphify-out/cost.json
-graphify-out/manifest.json
