@@ -1,0 +1,11 @@
+# Scratch data probes — superseded by dallas-stars-forecast/src/stars_forecast/collect.py
+probe/
+
+# Graphify tool working files (only graph.html / GRAPH_REPORT.md are shared)
+graphify-out/cache/
+graphify-out/memory/
+graphify-out/reflections/
+graphify-out/.graphify_*
+graphify-out/cost.json
+graphify-out/manifest.json
+graphify-out/graph.json
