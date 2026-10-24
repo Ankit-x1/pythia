@@ -39,19 +39,20 @@ PyYAML, pytest, tabulate.
 
 ```bash
 # 1. Acquire and clean all source data (network; cached and resumable, safe to re-run)
-python -m stars_forecast collect-data
+# 1. Acquire and clean all source data (network; cached and resumable, safe to re-run)
+uv run python -m stars_forecast collect-data
 
 # 2. Validate the datasets (exits nonzero if any check fails)
-python -m stars_forecast validate-data
+uv run python -m stars_forecast validate-data
 
 # 3. Regenerate the data report
-python -m stars_forecast data-report
+uv run python -m stars_forecast data-report
 
 # 4. Run the full analysis: diagnostics, 18 scenarios, backtest, tables, figures
-python -m stars_forecast run-all --n-seasons 10000 --seed 3315
+uv run python -m stars_forecast run-all --n-seasons 10000 --seed 3315
 
 # 5. Tests
-python -m pytest --junitxml=outputs/qa/test-results.xml
+uv run python -m pytest --junitxml=outputs/qa/test-results.xml
 ```
 
 `run-all` reads only local validated inputs — no network needed once `collect-data` has run. It
