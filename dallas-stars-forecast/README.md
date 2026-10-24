@@ -27,7 +27,7 @@ instructor review).
 
 ```bash
 git clone https://github.com/Ankit-x1/pythia.git
-cd dallas-stars-forecast
+cd pythia/dallas-stars-forecast
 
 uv sync --extra dev
 ```
