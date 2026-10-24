@@ -54,14 +54,14 @@ Every personnel number traces to a verified player row; the normalization and ro
 
 ## 7. Figures
 
-- `outputs/figures/fig1_goal_frequencies.png`
-- `outputs/figures/fig2_offense_point_distributions.png`
-- `outputs/figures/fig3_defense_point_distributions.png`
-- `outputs/figures/fig4_sensitivity_curves.png`
-- `outputs/figures/fig5_personnel_comparison.png`
-- `outputs/figures/fig6_central_points_vs_rank.png`
-- `outputs/figures/fig7_backtest.png`
-- `outputs/figures/fig8_data_overview.png`
+- `outputs\figures\fig1_goal_frequencies.png`
+- `outputs\figures\fig2_offense_point_distributions.png`
+- `outputs\figures\fig3_defense_point_distributions.png`
+- `outputs\figures\fig4_sensitivity_curves.png`
+- `outputs\figures\fig5_personnel_comparison.png`
+- `outputs\figures\fig6_central_points_vs_rank.png`
+- `outputs\figures\fig7_backtest.png`
+- `outputs\figures\fig8_data_overview.png`
 
 ## 8. Limitations
 
