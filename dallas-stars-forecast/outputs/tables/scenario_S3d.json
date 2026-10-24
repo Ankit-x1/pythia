@@ -1,0 +1,130 @@
+{
+  "scenario_id": "S3d",
+  "name": "Goaltending regression",
+  "family": "goaltending",
+  "lambda_gf": 3.2561,
+  "lambda_ga": 2.87134,
+  "details": {
+    "type": "defense",
+    "delta_team_save_pct": -0.01,
+    "shots_against_per_game": 26.1585,
+    "delta_goals_allowed_per_game": 0.26159,
+    "formula": "delta_GA_per_game = delta_SV% x SA_per_game; lambda_GA = lambda_GA0 - delta_GA_per_game",
+    "rationale": "Same mechanism as S3c with the opposite sign, representing a decline in team save percentage of 0.010."
+  },
+  "summary": {
+    "mean_points": 98.757,
+    "median_points": 99.0,
+    "sd_points": 8.51,
+    "points_p10": 88,
+    "points_p90": 110,
+    "points_p2_5": 82,
+    "points_p97_5": 115,
+    "interval_80": [
+      88,
+      110
+    ],
+    "interval_95": [
+      82,
+      115
+    ],
+    "mean_wins": 46.017,
+    "mean_regulation_losses": 29.26,
+    "mean_ot_losses": 6.723,
+    "mean_regulation_goal_differential": 31.611,
+    "mean_final_hockey_goal_differential": 31.632,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.8609,
+    "prob_at_least_95_points": 0.6952,
+    "prob_at_least_100_points": 0.4717,
+    "prob_at_least_105_points": 0.2513,
+    "prob_at_least_110_points": 0.1008
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.2757,
+    "prob_top3_rank_range": [
+      0.5109,
+      0.5499
+    ],
+    "mean_division_rank_range": [
+      3.42,
+      3.56
+    ],
+    "rank_p10_p90_best_case": [
+      2,
+      5
+    ],
+    "prob_rank_1": 0.0748,
+    "prob_rank_worst_at_most_4": 0.7261,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.126,
+        "prob_points_exactly_third_place": 0.0252,
+        "mean_best_rank": 4.281,
+        "mean_worst_rank": 4.382,
+        "prob_rank_best_at_most_3": 0.126,
+        "prob_rank_worst_at_most_3": 0.1008
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.3337,
+        "prob_points_exactly_third_place": 0.0432,
+        "mean_best_rank": 3.007,
+        "mean_worst_rank": 3.161,
+        "prob_rank_best_at_most_3": 0.6952,
+        "prob_rank_worst_at_most_3": 0.6518
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.2513,
+        "prob_points_exactly_third_place": 0.0388,
+        "mean_best_rank": 3.357,
+        "mean_worst_rank": 3.523,
+        "prob_rank_best_at_most_3": 0.5183,
+        "prob_rank_worst_at_most_3": 0.4717
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.377,
+        "prob_points_exactly_third_place": 0.0433,
+        "mean_best_rank": 3.452,
+        "mean_worst_rank": 3.616,
+        "prob_rank_best_at_most_3": 0.6088,
+        "prob_rank_worst_at_most_3": 0.5632
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.2905,
+        "prob_points_exactly_third_place": 0.0392,
+        "mean_best_rank": 3.023,
+        "mean_worst_rank": 3.131,
+        "prob_rank_best_at_most_3": 0.8013,
+        "prob_rank_worst_at_most_3": 0.767
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 98.605,
+  "mc_minus_analytic": 0.1522,
+  "n_seasons": 10000,
+  "seed": 3315
+}

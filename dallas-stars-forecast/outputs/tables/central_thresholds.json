@@ -1,0 +1,47 @@
+[
+  {
+    "season": "2021-22",
+    "first_place_points": 119,
+    "third_place_points": 109,
+    "third_place_team": "STL",
+    "mean_central_points": 93.5,
+    "dallas_points": 98,
+    "dallas_rank": 4
+  },
+  {
+    "season": "2022-23",
+    "first_place_points": 108,
+    "third_place_points": 103,
+    "third_place_team": "MIN",
+    "mean_central_points": 89.38,
+    "dallas_points": 108,
+    "dallas_rank": 1
+  },
+  {
+    "season": "2023-24",
+    "first_place_points": 113,
+    "third_place_points": 105,
+    "third_place_team": "COL",
+    "mean_central_points": 91.5,
+    "dallas_points": 113,
+    "dallas_rank": 1
+  },
+  {
+    "season": "2024-25",
+    "first_place_points": 116,
+    "third_place_points": 102,
+    "third_place_team": "COL",
+    "mean_central_points": 91.88,
+    "dallas_points": 106,
+    "dallas_rank": 2
+  },
+  {
+    "season": "2025-26",
+    "first_place_points": 119,
+    "third_place_points": 104,
+    "third_place_team": "MIN",
+    "mean_central_points": 93.88,
+    "dallas_points": 112,
+    "dallas_rank": 2
+  }
+]

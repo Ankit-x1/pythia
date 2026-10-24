@@ -1,0 +1,144 @@
+{
+  "scenario_id": "S3a",
+  "name": "Rantanen full-season availability",
+  "family": "availability",
+  "lambda_gf": 3.33155,
+  "lambda_ga": 2.60976,
+  "details": {
+    "type": "availability",
+    "net_goals_per_game": 0.07546,
+    "formula": "lambda_GF = lambda_GF0 + prior_goals/prior_gp x (assumed_gp - prior_gp) x role_factor / 82",
+    "components": [
+      {
+        "player": "Mikko Rantanen",
+        "mode": "availability",
+        "prior_goals": 22,
+        "prior_gp": 64,
+        "assumed_gp": 82,
+        "role_factor": 1.0,
+        "goals_per_game_rate": 0.34375,
+        "extra_games": 18,
+        "extra_goals": 6.188,
+        "per_team_game": 0.07546,
+        "note": "Adds only the 18 games missing from the 2025-26 baseline."
+      }
+    ],
+    "rationale": "Mikko Rantanen played 64 of 82 games for Dallas in 2025-26 in his first partial season with the club. This scenario asks what the offense looks like if he is available for a full 82 games at his verified Dallas rate.",
+    "roster_players_checked": 25
+  },
+  "summary": {
+    "mean_points": 107.391,
+    "median_points": 107.0,
+    "sd_points": 8.399,
+    "points_p10": 97,
+    "points_p90": 118,
+    "points_p2_5": 91,
+    "points_p97_5": 124,
+    "interval_80": [
+      97,
+      118
+    ],
+    "interval_95": [
+      91,
+      124
+    ],
+    "mean_wins": 50.395,
+    "mean_regulation_losses": 25.004,
+    "mean_ot_losses": 6.601,
+    "mean_regulation_goal_differential": 59.16,
+    "mean_final_hockey_goal_differential": 59.168,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.9823,
+    "prob_at_least_95_points": 0.9346,
+    "prob_at_least_100_points": 0.8298,
+    "prob_at_least_105_points": 0.6342,
+    "prob_at_least_110_points": 0.4019
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.6477,
+    "prob_top3_rank_range": [
+      0.7992,
+      0.8223
+    ],
+    "mean_division_rank_range": [
+      2.34,
+      2.45
+    ],
+    "rank_p10_p90_best_case": [
+      1,
+      4
+    ],
+    "prob_rank_1": 0.2801,
+    "prob_rank_worst_at_most_4": 0.9398,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.4484,
+        "prob_points_exactly_third_place": 0.0465,
+        "mean_best_rank": 3.285,
+        "mean_worst_rank": 3.415,
+        "prob_rank_best_at_most_3": 0.4484,
+        "prob_rank_worst_at_most_3": 0.4019
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.7187,
+        "prob_points_exactly_third_place": 0.0363,
+        "mean_best_rank": 1.837,
+        "mean_worst_rank": 1.94,
+        "prob_rank_best_at_most_3": 0.9346,
+        "prob_rank_worst_at_most_3": 0.922
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.6342,
+        "prob_points_exactly_third_place": 0.0433,
+        "mean_best_rank": 2.051,
+        "mean_worst_rank": 2.179,
+        "prob_rank_best_at_most_3": 0.8568,
+        "prob_rank_worst_at_most_3": 0.8298
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.755,
+        "prob_points_exactly_third_place": 0.0363,
+        "mean_best_rank": 2.263,
+        "mean_worst_rank": 2.376,
+        "prob_rank_best_at_most_3": 0.9025,
+        "prob_rank_worst_at_most_3": 0.8811
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.6824,
+        "prob_points_exactly_third_place": 0.0482,
+        "mean_best_rank": 2.261,
+        "mean_worst_rank": 2.341,
+        "prob_rank_best_at_most_3": 0.9692,
+        "prob_rank_worst_at_most_3": 0.9612
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 107.32,
+  "mc_minus_analytic": 0.0707,
+  "n_seasons": 10000,
+  "seed": 3315
+}

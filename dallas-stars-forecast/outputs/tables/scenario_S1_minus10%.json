@@ -1,0 +1,127 @@
+{
+  "scenario_id": "S1_minus10%",
+  "name": "Offense -10%, defense fixed",
+  "family": "offense_sensitivity",
+  "lambda_gf": 2.93049,
+  "lambda_ga": 2.60976,
+  "details": {
+    "offense_pct_change": -0.1,
+    "defense_pct_change": 0.0,
+    "formula": "lambda_GF = lambda_GF0 * (1 + s), lambda_GA fixed"
+  },
+  "summary": {
+    "mean_points": 97.803,
+    "median_points": 98.0,
+    "sd_points": 8.479,
+    "points_p10": 87,
+    "points_p90": 109,
+    "points_p2_5": 81,
+    "points_p97_5": 114,
+    "interval_80": [
+      87,
+      109
+    ],
+    "interval_95": [
+      81,
+      114
+    ],
+    "mean_wins": 45.378,
+    "mean_regulation_losses": 29.574,
+    "mean_ot_losses": 7.048,
+    "mean_regulation_goal_differential": 26.416,
+    "mean_final_hockey_goal_differential": 26.417,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.8371,
+    "prob_at_least_95_points": 0.6527,
+    "prob_at_least_100_points": 0.4213,
+    "prob_at_least_105_points": 0.2125,
+    "prob_at_least_110_points": 0.0823
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.2369,
+    "prob_top3_rank_range": [
+      0.4722,
+      0.5119
+    ],
+    "mean_division_rank_range": [
+      3.56,
+      3.7
+    ],
+    "rank_p10_p90_best_case": [
+      2,
+      5
+    ],
+    "prob_rank_1": 0.0617,
+    "prob_rank_worst_at_most_4": 0.692,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.1004,
+        "prob_points_exactly_third_place": 0.0181,
+        "mean_best_rank": 4.377,
+        "mean_worst_rank": 4.473,
+        "prob_rank_best_at_most_3": 0.1004,
+        "prob_rank_worst_at_most_3": 0.0823
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.2891,
+        "prob_points_exactly_third_place": 0.0384,
+        "mean_best_rank": 3.155,
+        "mean_worst_rank": 3.312,
+        "prob_rank_best_at_most_3": 0.6527,
+        "prob_rank_worst_at_most_3": 0.6068
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.2125,
+        "prob_points_exactly_third_place": 0.033,
+        "mean_best_rank": 3.515,
+        "mean_worst_rank": 3.679,
+        "prob_rank_best_at_most_3": 0.4706,
+        "prob_rank_worst_at_most_3": 0.4213
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.332,
+        "prob_points_exactly_third_place": 0.0429,
+        "mean_best_rank": 3.614,
+        "mean_worst_rank": 3.784,
+        "prob_rank_best_at_most_3": 0.5621,
+        "prob_rank_worst_at_most_3": 0.5148
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.2507,
+        "prob_points_exactly_third_place": 0.0382,
+        "mean_best_rank": 3.116,
+        "mean_worst_rank": 3.233,
+        "prob_rank_best_at_most_3": 0.7736,
+        "prob_rank_worst_at_most_3": 0.736
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 97.751,
+  "mc_minus_analytic": 0.0524,
+  "n_seasons": 10000,
+  "seed": 3315
+}

@@ -1,0 +1,112 @@
+{
+  "season": "2025-26",
+  "goals_for": {
+    "quantity": "regulation goals for",
+    "n": 82,
+    "mean": 3.2561,
+    "variance": 3.304,
+    "dispersion_index_var_over_mean": 1.0147,
+    "overdispersion_test_statistic": 82.191,
+    "overdispersion_p_value": 0.4422,
+    "overdispersed_at_5pct": false,
+    "chi_square_gof": {
+      "chi2_statistic": 2.291,
+      "df": 4,
+      "p_value": 0.6823,
+      "n_bins": 6,
+      "min_expected_count": 8.65,
+      "observed_bins": [
+        15,
+        13,
+        22,
+        13,
+        9,
+        10
+      ],
+      "expected_bins": [
+        13.45,
+        16.75,
+        18.18,
+        14.8,
+        9.64,
+        8.65
+      ]
+    },
+    "negative_binomial_comparison": {
+      "nb_mean": 3.2561,
+      "nb_size": 221.445,
+      "poisson_nll": 162.365,
+      "nb_nll": 162.368,
+      "poisson_aic": 326.731,
+      "nb_aic": 328.737
+    },
+    "poisson_preferred_by_aic": true,
+    "note": "Chi-square bins are pooled from the right so every expected count is at least 5; df accounts for one estimated parameter (the mean)."
+  },
+  "goals_against": {
+    "quantity": "regulation goals against",
+    "n": 82,
+    "mean": 2.6098,
+    "variance": 2.4631,
+    "dispersion_index_var_over_mean": 0.9438,
+    "overdispersion_test_statistic": 76.449,
+    "overdispersion_p_value": 0.6224,
+    "overdispersed_at_5pct": false,
+    "chi_square_gof": {
+      "chi2_statistic": 0.71,
+      "df": 4,
+      "p_value": 0.9501,
+      "n_bins": 6,
+      "min_expected_count": 6.03,
+      "observed_bins": [
+        5,
+        17,
+        19,
+        20,
+        12,
+        9
+      ],
+      "expected_bins": [
+        6.03,
+        15.74,
+        20.54,
+        17.87,
+        11.66,
+        9.72
+      ]
+    },
+    "negative_binomial_comparison": {
+      "nb_mean": 2.6098,
+      "nb_size": Infinity,
+      "poisson_nll": 149.853,
+      "nb_nll": 149.853,
+      "poisson_aic": 301.706,
+      "nb_aic": 303.706
+    },
+    "poisson_preferred_by_aic": true,
+    "note": "Chi-square bins are pooled from the right so every expected count is at least 5; df accounts for one estimated parameter (the mean)."
+  },
+  "independence_caveat": "Goals for and goals against in the same game are not independent in reality; the model treats them as independent Poisson draws, which is a documented approximation.",
+  "fitted_rates": {
+    "season": "2025-26",
+    "lambda_gf": 3.2560975609756095,
+    "lambda_ga": 2.6097560975609757,
+    "p_win_if_tied": 0.5,
+    "p_ot_given_tied": 0.5833333333333334,
+    "n_games": 82,
+    "n_tied": 24,
+    "n_tied_wins": 12,
+    "n_tied_losses": 12,
+    "n_ot_games": 14,
+    "n_so_games": 10
+  },
+  "proposal_rate_comparison": {
+    "proposal_lambda_gf_final_hockey": 3.3292682926829267,
+    "proposal_lambda_ga_final_hockey": 2.707317073170732,
+    "regulation_based_lambda_gf": 3.2561,
+    "regulation_based_lambda_ga": 2.60976,
+    "difference_gf": 0.07317,
+    "difference_ga": 0.09756,
+    "explanation": "The proposal divides official season totals (which include overtime goals) by 82. The simulation is regulation-based, so it uses the mean of 60-minute goals. Both are reported; the regulation version is used for the final run."
+  }
+}

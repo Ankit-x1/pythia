@@ -1,0 +1,127 @@
+{
+  "scenario_id": "S2_plus15%",
+  "name": "Goals allowed +15%, offense fixed",
+  "family": "defense_sensitivity",
+  "lambda_gf": 3.2561,
+  "lambda_ga": 3.00122,
+  "details": {
+    "offense_pct_change": 0.0,
+    "defense_pct_change": 0.15,
+    "formula": "lambda_GA = lambda_GA0 * (1 + d); a negative change means fewer goals allowed (better defense)"
+  },
+  "summary": {
+    "mean_points": 95.241,
+    "median_points": 95.0,
+    "sd_points": 8.551,
+    "points_p10": 84,
+    "points_p90": 106,
+    "points_p2_5": 78,
+    "points_p97_5": 112,
+    "interval_80": [
+      84,
+      106
+    ],
+    "interval_95": [
+      78,
+      112
+    ],
+    "mean_wins": 44.285,
+    "mean_regulation_losses": 31.044,
+    "mean_ot_losses": 6.671,
+    "mean_regulation_goal_differential": 21.035,
+    "mean_final_hockey_goal_differential": 21.037,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.7527,
+    "prob_at_least_95_points": 0.5368,
+    "prob_at_least_100_points": 0.3098,
+    "prob_at_least_105_points": 0.1375,
+    "prob_at_least_110_points": 0.0458
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.1587,
+    "prob_top3_rank_range": [
+      0.3757,
+      0.4131
+    ],
+    "mean_division_rank_range": [
+      3.91,
+      4.05
+    ],
+    "rank_p10_p90_best_case": [
+      2,
+      6
+    ],
+    "prob_rank_1": 0.036,
+    "prob_rank_worst_at_most_4": 0.5907,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.0583,
+        "prob_points_exactly_third_place": 0.0125,
+        "mean_best_rank": 4.624,
+        "mean_worst_rank": 4.716,
+        "prob_rank_best_at_most_3": 0.0583,
+        "prob_rank_worst_at_most_3": 0.0458
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.1992,
+        "prob_points_exactly_third_place": 0.0322,
+        "mean_best_rank": 3.548,
+        "mean_worst_rank": 3.697,
+        "prob_rank_best_at_most_3": 0.5368,
+        "prob_rank_worst_at_most_3": 0.4932
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.1375,
+        "prob_points_exactly_third_place": 0.0248,
+        "mean_best_rank": 3.932,
+        "mean_worst_rank": 4.093,
+        "prob_rank_best_at_most_3": 0.3542,
+        "prob_rank_worst_at_most_3": 0.3098
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.2315,
+        "prob_points_exactly_third_place": 0.0323,
+        "mean_best_rank": 4.032,
+        "mean_worst_rank": 4.196,
+        "prob_rank_best_at_most_3": 0.4455,
+        "prob_rank_worst_at_most_3": 0.4012
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.167,
+        "prob_points_exactly_third_place": 0.0295,
+        "mean_best_rank": 3.432,
+        "mean_worst_rank": 3.558,
+        "prob_rank_best_at_most_3": 0.6707,
+        "prob_rank_worst_at_most_3": 0.6287
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 95.171,
+  "mc_minus_analytic": 0.0696,
+  "n_seasons": 10000,
+  "seed": 3315
+}

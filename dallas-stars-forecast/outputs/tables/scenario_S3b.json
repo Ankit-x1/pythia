@@ -1,0 +1,215 @@
+{
+  "scenario_id": "S3b",
+  "name": "Fourth-line / depth turnover",
+  "family": "personnel",
+  "lambda_gf": 3.2424,
+  "lambda_ga": 2.60976,
+  "details": {
+    "type": "offense",
+    "net_goals_per_game": -0.0137,
+    "formula": "lambda_GF = lambda_GF0 + (sum of incoming - outgoing per-team-game contributions)",
+    "components": [
+      {
+        "player": "Adam Erne",
+        "direction": "out",
+        "prior_goals": 6,
+        "prior_gp": 45,
+        "assumed_gp": 45,
+        "role_factor": 1.0,
+        "projected_goals": 6.0,
+        "per_team_game": 0.07317,
+        "signed_effect": -0.07317,
+        "note": ""
+      },
+      {
+        "player": "Nathan Bastian",
+        "direction": "out",
+        "prior_goals": 6,
+        "prior_gp": 36,
+        "assumed_gp": 36,
+        "role_factor": 1.0,
+        "projected_goals": 6.0,
+        "per_team_game": 0.07317,
+        "signed_effect": -0.07317,
+        "note": ""
+      },
+      {
+        "player": "Alexander Petrovic",
+        "direction": "out",
+        "prior_goals": 2,
+        "prior_gp": 54,
+        "assumed_gp": 54,
+        "role_factor": 1.0,
+        "projected_goals": 2.0,
+        "per_team_game": 0.02439,
+        "signed_effect": -0.02439,
+        "note": ""
+      },
+      {
+        "player": "Ilya Lyubushkin",
+        "direction": "out",
+        "prior_goals": 1,
+        "prior_gp": 53,
+        "assumed_gp": 53,
+        "role_factor": 1.0,
+        "projected_goals": 1.0,
+        "per_team_game": 0.0122,
+        "signed_effect": -0.0122,
+        "note": ""
+      },
+      {
+        "player": "Cameron Hughes",
+        "direction": "out",
+        "prior_goals": 1,
+        "prior_gp": 3,
+        "assumed_gp": 3,
+        "role_factor": 1.0,
+        "projected_goals": 1.0,
+        "per_team_game": 0.0122,
+        "signed_effect": -0.0122,
+        "note": ""
+      },
+      {
+        "player": "Joel Kiviranta",
+        "direction": "in",
+        "prior_goals": 3,
+        "prior_gp": 51,
+        "assumed_gp": 60,
+        "role_factor": 0.9,
+        "projected_goals": 3.176,
+        "per_team_game": 0.03874,
+        "signed_effect": 0.03874,
+        "note": "Fourth-line role on a deeper forward group; 0.9 role factor applied."
+      },
+      {
+        "player": "David Perron",
+        "direction": "in",
+        "prior_goals": 13,
+        "prior_gp": 65,
+        "assumed_gp": 65,
+        "role_factor": 0.9,
+        "projected_goals": 11.7,
+        "per_team_game": 0.14268,
+        "signed_effect": 0.14268,
+        "note": "Age-38 season; 0.9 role factor discount applied to prior-year rate."
+      }
+    ],
+    "rationale": "Five depth skaters from the 2025-26 Dallas roster are not on the initial 2026-27 roster; Joel Kiviranta and David Perron arrive from Colorado and Ottawa/Detroit. Outgoing goals are replaced at each arrival's verified 2025-26 rate normalised to an expected role.",
+    "roster_players_checked": 25
+  },
+  "summary": {
+    "mean_points": 105.387,
+    "median_points": 106.0,
+    "sd_points": 8.336,
+    "points_p10": 95,
+    "points_p90": 116,
+    "points_p2_5": 89,
+    "points_p97_5": 121,
+    "interval_80": [
+      95,
+      116
+    ],
+    "interval_95": [
+      89,
+      121
+    ],
+    "mean_wins": 49.313,
+    "mean_regulation_losses": 25.926,
+    "mean_ot_losses": 6.76,
+    "mean_regulation_goal_differential": 51.94,
+    "mean_final_hockey_goal_differential": 51.912,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.9697,
+    "prob_at_least_95_points": 0.9069,
+    "prob_at_least_100_points": 0.7552,
+    "prob_at_least_105_points": 0.5471,
+    "prob_at_least_110_points": 0.3139
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.5627,
+    "prob_top3_rank_range": [
+      0.7434,
+      0.7729
+    ],
+    "mean_division_rank_range": [
+      2.56,
+      2.68
+    ],
+    "rank_p10_p90_best_case": [
+      1,
+      4
+    ],
+    "prob_rank_1": 0.2182,
+    "prob_rank_worst_at_most_4": 0.9096,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.357,
+        "prob_points_exactly_third_place": 0.0431,
+        "mean_best_rank": 3.545,
+        "mean_worst_rank": 3.667,
+        "prob_rank_best_at_most_3": 0.357,
+        "prob_rank_worst_at_most_3": 0.3139
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.6382,
+        "prob_points_exactly_third_place": 0.0458,
+        "mean_best_rank": 2.05,
+        "mean_worst_rank": 2.185,
+        "prob_rank_best_at_most_3": 0.9069,
+        "prob_rank_worst_at_most_3": 0.8823
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.5471,
+        "prob_points_exactly_third_place": 0.0418,
+        "mean_best_rank": 2.318,
+        "mean_worst_rank": 2.462,
+        "prob_rank_best_at_most_3": 0.7942,
+        "prob_rank_worst_at_most_3": 0.7552
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.679,
+        "prob_points_exactly_third_place": 0.0408,
+        "mean_best_rank": 2.493,
+        "mean_worst_rank": 2.618,
+        "prob_rank_best_at_most_3": 0.8561,
+        "prob_rank_worst_at_most_3": 0.8271
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.5924,
+        "prob_points_exactly_third_place": 0.0453,
+        "mean_best_rank": 2.416,
+        "mean_worst_rank": 2.493,
+        "prob_rank_best_at_most_3": 0.9503,
+        "prob_rank_worst_at_most_3": 0.9387
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 105.283,
+  "mc_minus_analytic": 0.1036,
+  "n_seasons": 10000,
+  "seed": 3315
+}

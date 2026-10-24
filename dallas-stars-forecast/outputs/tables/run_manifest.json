@@ -1,0 +1,166 @@
+{
+  "model_version": "poisson-mc-v1",
+  "package_version": "0.2.0",
+  "config_version": 3,
+  "n_seasons": 10000,
+  "seed": 3315,
+  "games_per_season": 82,
+  "baseline_rates": {
+    "season": "2025-26",
+    "lambda_gf": 3.2560975609756095,
+    "lambda_ga": 2.6097560975609757,
+    "p_win_if_tied": 0.5,
+    "p_ot_given_tied": 0.5833333333333334,
+    "n_games": 82,
+    "n_tied": 24,
+    "n_tied_wins": 12,
+    "n_tied_losses": 12,
+    "n_ot_games": 14,
+    "n_so_games": 10
+  },
+  "scenarios": {
+    "S0": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.60976,
+      "family": "baseline"
+    },
+    "S1_minus15%": {
+      "lambda_gf": 2.76768,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S1_minus10%": {
+      "lambda_gf": 2.93049,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S1_minus5%": {
+      "lambda_gf": 3.09329,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S1_plus5%": {
+      "lambda_gf": 3.4189,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S1_plus10%": {
+      "lambda_gf": 3.58171,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S1_plus15%": {
+      "lambda_gf": 3.74451,
+      "lambda_ga": 2.60976,
+      "family": "offense_sensitivity"
+    },
+    "S2_minus15%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.21829,
+      "family": "defense_sensitivity"
+    },
+    "S2_minus10%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.34878,
+      "family": "defense_sensitivity"
+    },
+    "S2_minus5%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.47927,
+      "family": "defense_sensitivity"
+    },
+    "S2_plus5%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.74024,
+      "family": "defense_sensitivity"
+    },
+    "S2_plus10%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.87073,
+      "family": "defense_sensitivity"
+    },
+    "S2_plus15%": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 3.00122,
+      "family": "defense_sensitivity"
+    },
+    "S3a": {
+      "lambda_gf": 3.33155,
+      "lambda_ga": 2.60976,
+      "family": "availability"
+    },
+    "S3b": {
+      "lambda_gf": 3.2424,
+      "lambda_ga": 2.60976,
+      "family": "personnel"
+    },
+    "S3c": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.34817,
+      "family": "goaltending"
+    },
+    "S3d": {
+      "lambda_gf": 3.2561,
+      "lambda_ga": 2.87134,
+      "family": "goaltending"
+    },
+    "S4": {
+      "lambda_gf": 3.33155,
+      "lambda_ga": 2.34817,
+      "family": "combined"
+    }
+  },
+  "data_checksums": {
+    "game_log_dal_2025_26.csv": "f1e966849d1cd325e556c9da694e5d97290635801f2672c9cc931db0bf6be8f8",
+    "game_log_dal_2024_25.csv": "b79c3324b4d8a1bb48d6717bb51bc219f69ffd3ea62b465d2bf9a0354ed31075",
+    "team_totals_dal_2025_26.csv": "f864ab22c2c97d168ea40828f13080a7c5eb15271839597e7e510b4706efe8a2",
+    "team_totals_dal_2024_25.csv": "da6be8a857c946c6809896efbe60db98fd41bd48582d1a6b53db3da4a11c5866",
+    "central_standings_2021_2026.csv": "2aedbce2602afaf481c79a94faa648c501bdee10e726c3da1bcb954c4b5d4500",
+    "skaters_dal_2025_26.csv": "78b3d502cecea896cac0e6a5ce4b94ba565674910a0440e1f3209ef59988c42c",
+    "goalies_dal_2025_26.csv": "a9b2cad792580601a18ccf45240a9d24d0383ac1cd2d5b6498a67af3c0b30244",
+    "roster_dal_2026_27.csv": "d4b1aeefac5e348f29bf856c6b79aa7342f2f86f5271331e0f7fab215775376f",
+    "arrivals_dal_2026_27_prior_season.csv": "202bbff9980a06b15252bb31e5f378948a29886457f33d36126d8c925d34c38f"
+  },
+  "validation": {
+    "all_passed": true,
+    "n_checks": 30
+  },
+  "figures": [
+    "outputs\\figures\\fig1_goal_frequencies.png",
+    "outputs\\figures\\fig2_offense_point_distributions.png",
+    "outputs\\figures\\fig3_defense_point_distributions.png",
+    "outputs\\figures\\fig4_sensitivity_curves.png",
+    "outputs\\figures\\fig5_personnel_comparison.png",
+    "outputs\\figures\\fig6_central_points_vs_rank.png",
+    "outputs\\figures\\fig7_backtest.png",
+    "outputs\\figures\\fig8_data_overview.png"
+  ],
+  "tables": [
+    "outputs\\tables\\points_rank_table.csv",
+    "outputs\\tables\\scenario_summary.csv",
+    "outputs\\tables\\backtest.json",
+    "outputs\\tables\\central_thresholds.json",
+    "outputs\\tables\\diagnostics.json",
+    "outputs\\tables\\run_manifest.json",
+    "outputs\\tables\\run_metadata.json",
+    "outputs\\tables\\scenario_S0.json",
+    "outputs\\tables\\scenario_S1_minus10%.json",
+    "outputs\\tables\\scenario_S1_minus15%.json",
+    "outputs\\tables\\scenario_S1_minus5%.json",
+    "outputs\\tables\\scenario_S1_plus10%.json",
+    "outputs\\tables\\scenario_S1_plus15%.json",
+    "outputs\\tables\\scenario_S1_plus5%.json",
+    "outputs\\tables\\scenario_S2_minus10%.json",
+    "outputs\\tables\\scenario_S2_minus15%.json",
+    "outputs\\tables\\scenario_S2_minus5%.json",
+    "outputs\\tables\\scenario_S2_plus10%.json",
+    "outputs\\tables\\scenario_S2_plus15%.json",
+    "outputs\\tables\\scenario_S2_plus5%.json",
+    "outputs\\tables\\scenario_S3a.json",
+    "outputs\\tables\\scenario_S3b.json",
+    "outputs\\tables\\scenario_S3c.json",
+    "outputs\\tables\\scenario_S3d.json",
+    "outputs\\tables\\scenario_S4.json"
+  ],
+  "reproducibility_note": "Numerical outputs depend on seed, n_seasons, config version, model version and the input checksums above. Run timestamps are metadata only and are not part of the numerical check."
+}

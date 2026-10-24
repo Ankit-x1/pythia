@@ -1,0 +1,130 @@
+{
+  "scenario_id": "S3c",
+  "name": "Goaltending save-percentage shift",
+  "family": "goaltending",
+  "lambda_gf": 3.2561,
+  "lambda_ga": 2.34817,
+  "details": {
+    "type": "defense",
+    "delta_team_save_pct": 0.01,
+    "shots_against_per_game": 26.1585,
+    "delta_goals_allowed_per_game": -0.26159,
+    "formula": "delta_GA_per_game = delta_SV% x SA_per_game; lambda_GA = lambda_GA0 - delta_GA_per_game",
+    "rationale": "Dallas allowed 26.16 shots on goal against per game in 2025-26. This scenario translates a +/-0.010 team save-percentage shift into a goals-allowed rate change. It is an approximation: empty-net goals are not shots on goal, so the modelled change is a lower bound on the true effect."
+  },
+  "summary": {
+    "mean_points": 112.703,
+    "median_points": 113.0,
+    "sd_points": 7.942,
+    "points_p10": 102,
+    "points_p90": 123,
+    "points_p2_5": 97,
+    "points_p97_5": 128,
+    "interval_80": [
+      102,
+      123
+    ],
+    "interval_95": [
+      97,
+      128
+    ],
+    "mean_wins": 53.015,
+    "mean_regulation_losses": 22.312,
+    "mean_ot_losses": 6.673,
+    "mean_regulation_goal_differential": 74.519,
+    "mean_final_hockey_goal_differential": 74.507,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.9981,
+    "prob_at_least_95_points": 0.9876,
+    "prob_at_least_100_points": 0.9476,
+    "prob_at_least_105_points": 0.8493,
+    "prob_at_least_110_points": 0.6568
+  },
+  "historical_central": {
+    "statistic": "historical top-three Central point-level probability",
+    "definition": "average over the five historical Central seasons of P(simulated Dallas points >= that season's third-place point total); >= means the threshold is met when points equal it",
+    "prob_meets_third_place_points": 0.8483,
+    "prob_top3_rank_range": [
+      0.9102,
+      0.9241
+    ],
+    "mean_division_rank_range": [
+      1.8,
+      1.89
+    ],
+    "rank_p10_p90_best_case": [
+      1,
+      3
+    ],
+    "prob_rank_1": 0.474,
+    "prob_rank_worst_at_most_4": 0.987,
+    "per_season": [
+      {
+        "season": "2021-22",
+        "third_place_points": 109,
+        "third_place_team": "STL",
+        "prob_points_at_least_third_place": 0.6999,
+        "prob_points_exactly_third_place": 0.0431,
+        "mean_best_rank": 2.569,
+        "mean_worst_rank": 2.704,
+        "prob_rank_best_at_most_3": 0.6999,
+        "prob_rank_worst_at_most_3": 0.6568
+      },
+      {
+        "season": "2022-23",
+        "third_place_points": 103,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.8979,
+        "prob_points_exactly_third_place": 0.0228,
+        "mean_best_rank": 1.335,
+        "mean_worst_rank": 1.402,
+        "prob_rank_best_at_most_3": 0.9876,
+        "prob_rank_worst_at_most_3": 0.9828
+      },
+      {
+        "season": "2023-24",
+        "third_place_points": 105,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.8493,
+        "prob_points_exactly_third_place": 0.0318,
+        "mean_best_rank": 1.45,
+        "mean_worst_rank": 1.542,
+        "prob_rank_best_at_most_3": 0.9597,
+        "prob_rank_worst_at_most_3": 0.9476
+      },
+      {
+        "season": "2024-25",
+        "third_place_points": 102,
+        "third_place_team": "COL",
+        "prob_points_at_least_third_place": 0.9191,
+        "prob_points_exactly_third_place": 0.0212,
+        "mean_best_rank": 1.752,
+        "mean_worst_rank": 1.833,
+        "prob_rank_best_at_most_3": 0.9781,
+        "prob_rank_worst_at_most_3": 0.9705
+      },
+      {
+        "season": "2025-26",
+        "third_place_points": 104,
+        "third_place_team": "MIN",
+        "prob_points_at_least_third_place": 0.8751,
+        "prob_points_exactly_third_place": 0.0258,
+        "mean_best_rank": 1.895,
+        "mean_worst_rank": 1.959,
+        "prob_rank_best_at_most_3": 0.9954,
+        "prob_rank_worst_at_most_3": 0.9933
+      }
+    ],
+    "caveats": [
+      "Historical Dallas rows are excluded from the competitors.",
+      "Ties are reported as a rank interval, not resolved with an invented tiebreaker.",
+      "This is not a playoff-qualification probability and not an exact 2026-27 rank.",
+      "Five Central seasons are a small sample of competitor behaviour."
+    ]
+  },
+  "analytic_expected_points": 112.644,
+  "mc_minus_analytic": 0.0588,
+  "n_seasons": 10000,
+  "seed": 3315
+}

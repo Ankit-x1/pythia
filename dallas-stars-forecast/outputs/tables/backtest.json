@@ -1,0 +1,80 @@
+{
+  "train_season": "2024-25",
+  "target_season": "2025-26",
+  "frozen_configuration": {
+    "frozen_from": "2024-25",
+    "lambda_gf": 3.26829,
+    "lambda_ga": 2.65854,
+    "p_win_if_tied": 0.6,
+    "n_tied_training_games": 15
+  },
+  "simulation": {
+    "mean_points": 105.918,
+    "median_points": 106.0,
+    "sd_points": 8.26,
+    "points_p10": 95,
+    "points_p90": 117,
+    "points_p2_5": 90,
+    "points_p97_5": 121,
+    "interval_80": [
+      95,
+      117
+    ],
+    "interval_95": [
+      90,
+      121
+    ],
+    "mean_wins": 50.291,
+    "mean_regulation_losses": 26.373,
+    "mean_ot_losses": 5.336,
+    "mean_regulation_goal_differential": 50.034,
+    "mean_final_hockey_goal_differential": 51.973,
+    "n_seasons": 10000,
+    "interval_label": "80%/95% simulation (prediction) intervals conditional on the model; not confidence intervals for an estimated mean",
+    "prob_at_least_90_points": 0.9753,
+    "prob_at_least_95_points": 0.9173,
+    "prob_at_least_100_points": 0.7832,
+    "prob_at_least_105_points": 0.5631,
+    "prob_at_least_110_points": 0.3405
+  },
+  "actual": {
+    "points": 112,
+    "wins": 50,
+    "regulation_losses": 20,
+    "ot_losses": 12,
+    "gw_reg_otl": [
+      50,
+      20,
+      12
+    ]
+  },
+  "error": {
+    "absolute_error_of_mean_points": 6.082,
+    "error_of_median_points": 6.0,
+    "points_percentile_of_actual": 78.29,
+    "actual_inside_80pct_interval": true,
+    "actual_inside_95pct_interval": true,
+    "win_error": 0.291,
+    "regulation_loss_error": 6.373,
+    "ot_loss_error": -6.664
+  },
+  "predicted_vs_actual_record": {
+    "predicted_W_regL_OTL": [
+      50.29,
+      26.37,
+      5.34
+    ],
+    "actual_W_regL_OTL": [
+      50,
+      20,
+      12
+    ]
+  },
+  "interpretation_limits": [
+    "One backtest does not establish general forecasting accuracy.",
+    "The target season's own totals were never used to fit or tune the model.",
+    "A single season is one draw from a wide distribution; interval containment is weak evidence on its own."
+  ],
+  "post_backtest_revisions": [],
+  "samples_file": "outputs/tables/backtest_samples.npz"
+}
