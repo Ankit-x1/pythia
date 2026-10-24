@@ -1,0 +1,12 @@
+{
+  "available": true,
+  "url": "https://www.hockey-reference.com/teams/DAL/2025_gamelog.html",
+  "hr_rows": 82,
+  "hr_sum_GF": 277.0,
+  "hr_sum_GA": 224.0,
+  "log_sum_GF_final_hockey": 275.0,
+  "log_sum_GA_final_hockey": 222.0,
+  "log_sum_GF_displayed": 277.0,
+  "log_sum_GA_displayed": 224.0,
+  "note": "Hockey-Reference game logs report final hockey scores; their GF/GA totals exclude the shootout decision increment."
+}

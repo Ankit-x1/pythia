@@ -1,0 +1,5 @@
+player_id,player,position,team_attribution,gp,goals,assists,points,shots,shooting_pct,toi_per_gp_min,season,source_url
+8481641,Joel Kiviranta,L,COL,51,3,6,9,50,0.06,10.4,2025-26,https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&start=0&limit=200&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20playerId%3D8481641
+8474102,David Perron,L,"OTT,DET",65,13,15,28,93,0.13978,13.6,2025-26,https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&start=0&limit=200&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20playerId%3D8474102
+8477335,Kyle Burroughs,D,,0,0,0,0,0,,,2025-26,https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&start=0&limit=200&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20playerId%3D8477335
+8474574,Tyler Myers,D,"VAN,DAL",73,1,10,11,88,0.01136,19.5,2025-26,https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&start=0&limit=200&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20playerId%3D8474574

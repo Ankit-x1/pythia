@@ -1,0 +1,2 @@
+season,team,team_id,gp,wins,losses,ot_losses,points,point_pct,goals_for,goals_against,gf_per_game,ga_per_game,pp_pct,pp_net_pct,pk_pct,pk_net_pct,shots_for_per_game,shots_against_per_game,faceoff_win_pct,wins_in_regulation,wins_in_shootout,regulation_and_ot_wins,team_shutouts,source_url
+2025-26,Dallas Stars,25,82,50,20,12,112,0.68292,273,222,3.32926,2.70731,0.28629,0.258064,0.803213,0.819277,25.29268,26.15853,0.515944,38,6,44,5,https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=50&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2

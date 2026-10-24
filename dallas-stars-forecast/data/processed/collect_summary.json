@@ -1,0 +1,15 @@
+{
+  "team_totals_2025_26": 1,
+  "game_log_2025_26": 82,
+  "skaters_2025_26": 25,
+  "goalies_2025_26": 2,
+  "team_totals_2024_25": 1,
+  "game_log_2024_25": 82,
+  "central_standings_rows": 40,
+  "roster_2026_27": 25,
+  "arrivals_rows": 4,
+  "hr_crosscheck_2025_26": true,
+  "hr_crosscheck_2024_25": true,
+  "raw_files": 188,
+  "source_manifest": "data/raw/source_manifest.json"
+}

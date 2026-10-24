@@ -1,0 +1,3 @@
+player_id,player,gp,games_started,wins,losses,ot_losses,shots_against,saves,goals_against,save_pct,gaa,shutouts,season,source_url
+8479979,Jake Oettinger,54,54,35,12,6,1372,1234,138,0.89941,2.59221,4,2025-26,https://api.nhle.com/stats/rest/en/goalie/summary?isAggregate=false&isGame=false&start=0&limit=50&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20teamAbbrevs%3D%22DAL%22
+8479193,Casey DeSmith,30,28,15,8,6,760,689,71,0.90657,2.42735,1,2025-26,https://api.nhle.com/stats/rest/en/goalie/summary?isAggregate=false&isGame=false&start=0&limit=50&cayenneExp=seasonId%3D20252026%20and%20gameTypeId%3D2%20and%20teamAbbrevs%3D%22DAL%22
