@@ -11,5 +11,5 @@
   "hr_crosscheck_2025_26": true,
   "hr_crosscheck_2024_25": true,
   "raw_files": 188,
-  "source_manifest": "data/raw/source_manifest.json"
+  "source_manifest": "data\\raw\\source_manifest.json"
 }
