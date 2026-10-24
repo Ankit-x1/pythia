@@ -26,10 +26,10 @@ instructor review).
 ## Install
 
 ```bash
-git clone https://github.com/Ankit-x1/pythia && cd dallas-stars-forecast
-python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"
+git clone https://github.com/Ankit-x1/pythia.git
+cd dallas-stars-forecast
+
+uv sync --extra dev
 ```
 
 Requires Python 3.10+ (developed on 3.13). Dependencies: pandas, NumPy, SciPy, Matplotlib, requests,
@@ -136,7 +136,6 @@ with `python -m stars_forecast collect-data`.
 
 Complete: data collection, validation, model, all four scenario families, 10,000-season runs,
 figures, backtest, QA suite, CLI, data report.
-
 
 ## Limitations
 
