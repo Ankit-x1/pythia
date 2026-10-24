@@ -1,0 +1,137 @@
+# Versioned scenario configuration. Any change here invalidates saved run manifests.
+version: 3
+
+seasons:
+  fit: "2025-26"          # model calibration season
+  backtest_train: "2024-25"
+  backtest_target: "2025-26"
+  standings_history: ["2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+
+simulation:
+  n_seasons: 10000
+  seed: 3315
+  games_per_season: 82
+  # Point thresholds reported for every scenario
+  point_thresholds: [90, 95, 100, 105, 110]
+  # Central percentile used for the historical "top-three point level" statistic
+  top_rank_threshold: 3
+
+sensitivity:
+  # S1 (offense) and S2 (defense) percentage grid, applied to the baseline rate
+  percentages: [-0.15, -0.10, -0.05, 0.05, 0.10, 0.15]
+
+roster:
+  # Transparent normalization for personnel scenarios:
+  #   projected_goals = prior_goals / prior_gp * assumed_gp * role_factor
+  #   per_team_game   = projected_goals / 82
+  # role_factor < 1.0 discounts a smaller/lesser role than the prior season.
+  default_role_factor: 1.0
+
+  scenarios:
+    - id: S3a
+      name: "Rantanen full-season availability"
+      family: availability
+      type: availability
+      rationale: >
+        Mikko Rantanen played 64 of 82 games for Dallas in 2025-26 in his first
+        partial season with the club. This scenario asks what the offense looks
+        like if he is available for a full 82 games at his verified Dallas rate.
+      components:
+        # Availability is a games-played change for a player already inside the baseline,
+        # so the effect is rate x (assumed_gp - prior_gp), not rate x assumed_gp.
+        - player: Mikko Rantanen
+          prior_goals: 22
+          prior_gp: 64
+          assumed_gp: 82
+          role_factor: 1.0
+          note: "Adds only the 18 games missing from the 2025-26 baseline."
+
+    - id: S3b
+      name: "Fourth-line / depth turnover"
+      family: personnel
+      type: offense
+      rationale: >
+        Five depth skaters from the 2025-26 Dallas roster are not on the initial
+        2026-27 roster; Joel Kiviranta and David Perron arrive from Colorado and
+        Ottawa/Detroit. Outgoing goals are replaced at each arrival's verified
+        2025-26 rate normalised to an expected role.
+      components:
+        - player: Adam Erne
+          direction: out
+          prior_goals: 6
+          prior_gp: 45
+          assumed_gp: 45
+          role_factor: 1.0
+        - player: Nathan Bastian
+          direction: out
+          prior_goals: 6
+          prior_gp: 36
+          assumed_gp: 36
+          role_factor: 1.0
+        - player: Alexander Petrovic
+          direction: out
+          prior_goals: 2
+          prior_gp: 54
+          assumed_gp: 54
+          role_factor: 1.0
+        - player: Ilya Lyubushkin
+          direction: out
+          prior_goals: 1
+          prior_gp: 53
+          assumed_gp: 53
+          role_factor: 1.0
+        - player: Cameron Hughes
+          direction: out
+          prior_goals: 1
+          prior_gp: 3
+          assumed_gp: 3
+          role_factor: 1.0
+        - player: Joel Kiviranta
+          direction: in
+          prior_goals: 3
+          prior_gp: 51
+          assumed_gp: 60
+          role_factor: 0.9
+          note: "Fourth-line role on a deeper forward group; 0.9 role factor applied."
+        - player: David Perron
+          direction: in
+          prior_goals: 13
+          prior_gp: 65
+          assumed_gp: 65
+          role_factor: 0.9
+          note: "Age-38 season; 0.9 role factor discount applied to prior-year rate."
+
+    - id: S3c
+      name: "Goaltending save-percentage shift"
+      family: goaltending
+      type: defense
+      rationale: >
+        Dallas allowed 26.16 shots on goal against per game in 2025-26. This
+        scenario translates a +/-0.010 team save-percentage shift into a
+        goals-allowed rate change. It is an approximation: empty-net goals are not
+        shots on goal, so the modelled change is a lower bound on the true effect.
+      components:
+        - delta_team_save_pct: 0.010
+          note: "Applied as delta_GA_per_game = delta_SV% * shots_against_per_game."
+
+    - id: S3d
+      name: "Goaltending regression"
+      family: goaltending
+      type: defense
+      rationale: >
+        Same mechanism as S3c with the opposite sign, representing a decline in
+        team save percentage of 0.010.
+      components:
+        - delta_team_save_pct: -0.010
+
+    - id: S4
+      name: "Combined case: Rantanen full season + 0.010 save-pct gain"
+      family: combined
+      type: both
+      rationale: >
+        One management-style combined case built only from effects already
+        evaluated separately. Order of application is documented and explicit:
+        the roster/offense term is applied first to lambda_GF, then the
+        goaltending term to lambda_GA. This is a conditional scenario, not a
+        proven best prediction.
+      combines: ["S3a", "S3c"]
