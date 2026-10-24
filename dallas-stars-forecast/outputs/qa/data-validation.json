@@ -1,0 +1,395 @@
+{
+  "generated_utc": "2026-10-24T05:12:26+00:00",
+  "all_passed": true,
+  "n_checks": 30,
+  "n_passed": 30,
+  "conventions": {
+    "dallas_2025_26_official_totals": {
+      "goals_for": 273,
+      "goals_against": 222,
+      "wins": 50,
+      "regulation_losses": 20,
+      "ot_losses": 12,
+      "points": 112
+    },
+    "goal_convention_matching_official_totals": [
+      "final_hockey_reg_plus_ot"
+    ]
+  },
+  "checks": [
+    {
+      "check": "dataset_A_present:team_totals_dal_2025_26.csv",
+      "dataset": "A",
+      "passed": true,
+      "detail": "team_totals_dal_2025_26.csv has 1 rows (>= 1 required)",
+      "evidence": {
+        "file": "data\\processed\\team_totals_dal_2025_26.csv"
+      }
+    },
+    {
+      "check": "dataset_B_present:game_log_dal_2025_26.csv",
+      "dataset": "B",
+      "passed": true,
+      "detail": "game_log_dal_2025_26.csv has 82 rows (>= 82 required)",
+      "evidence": {
+        "file": "data\\processed\\game_log_dal_2025_26.csv"
+      }
+    },
+    {
+      "check": "dataset_C_present:skaters_dal_2025_26.csv",
+      "dataset": "C",
+      "passed": true,
+      "detail": "skaters_dal_2025_26.csv has 25 rows (>= 15 required)",
+      "evidence": {
+        "file": "data\\processed\\skaters_dal_2025_26.csv"
+      }
+    },
+    {
+      "check": "dataset_D_present:goalies_dal_2025_26.csv",
+      "dataset": "D",
+      "passed": true,
+      "detail": "goalies_dal_2025_26.csv has 2 rows (>= 2 required)",
+      "evidence": {
+        "file": "data\\processed\\goalies_dal_2025_26.csv"
+      }
+    },
+    {
+      "check": "dataset_E_present:team_totals_dal_2024_25.csv",
+      "dataset": "E",
+      "passed": true,
+      "detail": "team_totals_dal_2024_25.csv has 1 rows (>= 1 required)",
+      "evidence": {
+        "file": "data\\processed\\team_totals_dal_2024_25.csv"
+      }
+    },
+    {
+      "check": "dataset_E_present:game_log_dal_2024_25.csv",
+      "dataset": "E",
+      "passed": true,
+      "detail": "game_log_dal_2024_25.csv has 82 rows (>= 82 required)",
+      "evidence": {
+        "file": "data\\processed\\game_log_dal_2024_25.csv"
+      }
+    },
+    {
+      "check": "dataset_F_present:central_standings_2021_2026.csv",
+      "dataset": "F",
+      "passed": true,
+      "detail": "central_standings_2021_2026.csv has 40 rows (>= 40 required)",
+      "evidence": {
+        "file": "data\\processed\\central_standings_2021_2026.csv"
+      }
+    },
+    {
+      "check": "dataset_G_present:roster_dal_2026_27.csv",
+      "dataset": "G",
+      "passed": true,
+      "detail": "roster_dal_2026_27.csv has 25 rows (>= 20 required)",
+      "evidence": {
+        "file": "data\\processed\\roster_dal_2026_27.csv"
+      }
+    },
+    {
+      "check": "regular_season_only_games",
+      "dataset": "B",
+      "passed": true,
+      "detail": "every game row has game_type == 2 (regular season)",
+      "evidence": {
+        "rows_2025_26": 82,
+        "rows_2024_25": 82
+      }
+    },
+    {
+      "check": "all_games_final",
+      "dataset": "B",
+      "passed": true,
+      "detail": "every 2025-26 game is complete ('OFF' is the NHL API's terminal state for a finished game in this endpoint version; 'FINAL' also accepted)",
+      "evidence": {
+        "game_states": [
+          "OFF"
+        ]
+      }
+    },
+    {
+      "check": "season_game_counts",
+      "dataset": "B",
+      "passed": true,
+      "detail": "2025-26: 82 games, 2024-25: 82 games (82 required)",
+      "evidence": {
+        "games_2025_26": 82,
+        "games_2024_25": 82
+      }
+    },
+    {
+      "check": "unique_game_ids",
+      "dataset": "B",
+      "passed": true,
+      "detail": "no duplicate game IDs in either season",
+      "evidence": {
+        "n_2025_26": 82,
+        "n_2024_25": 82
+      }
+    },
+    {
+      "check": "game_log_points_reconcile",
+      "dataset": "B",
+      "passed": true,
+      "detail": "W=50, regL=20, OTL=12, sum=82; points=2W+OTL=112 vs official 112",
+      "evidence": {
+        "wins": 50,
+        "regulation_losses": 20,
+        "ot_losses": 12,
+        "points": 112
+      }
+    },
+    {
+      "check": "game_log_points_reconcile_2024_25",
+      "dataset": "E",
+      "passed": true,
+      "detail": "2024-25: W=50, regL=26, OTL=6, points=106 vs official 106",
+      "evidence": {
+        "wins": 50,
+        "regulation_losses": 26,
+        "ot_losses": 6,
+        "points": 106
+      }
+    },
+    {
+      "check": "goal_convention_reconcile_2025_26",
+      "dataset": "B",
+      "passed": true,
+      "detail": "official GF/GA = 273/222; regulation_only=267/214; final_hockey_reg_plus_ot=273/222; displayed_incl_shootout=279/226; matching convention(s): ['final_hockey_reg_plus_ot']",
+      "evidence": {
+        "official": [
+          273,
+          222
+        ],
+        "candidates": {
+          "regulation_only": [
+            267,
+            214
+          ],
+          "final_hockey_reg_plus_ot": [
+            273,
+            222
+          ],
+          "displayed_incl_shootout": [
+            279,
+            226
+          ]
+        },
+        "matches": [
+          "final_hockey_reg_plus_ot"
+        ]
+      }
+    },
+    {
+      "check": "goal_convention_reconcile_2024_25",
+      "dataset": "E",
+      "passed": true,
+      "detail": "official GF/GA = 275/222; regulation_only=268/218; final_hockey_reg_plus_ot=275/222; displayed_incl_shootout=277/224; matching convention(s): ['final_hockey_reg_plus_ot']",
+      "evidence": {
+        "official": [
+          275,
+          222
+        ],
+        "candidates": {
+          "regulation_only": [
+            268,
+            218
+          ],
+          "final_hockey_reg_plus_ot": [
+            275,
+            222
+          ],
+          "displayed_incl_shootout": [
+            277,
+            224
+          ]
+        },
+        "matches": [
+          "final_hockey_reg_plus_ot"
+        ]
+      }
+    },
+    {
+      "check": "shots_reconcile",
+      "dataset": "B",
+      "passed": true,
+      "detail": "game-log shots 2074/2145 vs per-game x 82 2074/2145",
+      "evidence": {
+        "shots_for": 2074,
+        "shots_against": 2145
+      }
+    },
+    {
+      "check": "power_play_reconcile",
+      "dataset": "B",
+      "passed": true,
+      "detail": "PP 71/248 = 0.2863 vs official 0.2863",
+      "evidence": {
+        "pp_goals": 71.0,
+        "pp_opps": 248.0,
+        "pp_pct_from_log": 0.28629
+      }
+    },
+    {
+      "check": "goalie_reconcile",
+      "dataset": "D",
+      "passed": true,
+      "detail": "per-goalie saves+GA = shots_against True; goalie SA 2132 vs team SA 2145 (gap 13); goalie GA 209 vs team GA 222 (gap 13 = empty-net/attribution goals, consistent with the SA gap)",
+      "evidence": {
+        "goalie_ga": 209,
+        "team_ga": 222,
+        "goalie_sa": 2132,
+        "team_sa": 2145,
+        "empty_net_gap": 13
+      }
+    },
+    {
+      "check": "skater_reconcile",
+      "dataset": "C",
+      "passed": true,
+      "detail": "skater goals (DAL-attributed) = 271 vs team GF 273",
+      "evidence": {
+        "skater_goals": 271,
+        "team_gf": 273
+      }
+    },
+    {
+      "check": "traded_player_attribution",
+      "dataset": "C",
+      "passed": true,
+      "detail": "every skater row carries a Dallas team attribution (Dallas-only contribution)",
+      "evidence": {
+        "attributions": [
+          "DAL"
+        ]
+      }
+    },
+    {
+      "check": "historical_seasons_complete",
+      "dataset": "F",
+      "passed": true,
+      "detail": "seasons present: ['2021-22', '2022-23', '2023-24', '2024-25', '2025-26']",
+      "evidence": {
+        "rows_per_season": {
+          "2021-22": 8,
+          "2022-23": 8,
+          "2023-24": 8,
+          "2024-25": 8,
+          "2025-26": 8
+        }
+      }
+    },
+    {
+      "check": "central_division_membership",
+      "dataset": "F",
+      "passed": true,
+      "detail": "8 Central Division teams in every historical season",
+      "evidence": {
+        "counts": {
+          "2021-22": 8,
+          "2022-23": 8,
+          "2023-24": 8,
+          "2024-25": 8,
+          "2025-26": 8
+        }
+      }
+    },
+    {
+      "check": "standings_games_played",
+      "dataset": "F",
+      "passed": true,
+      "detail": "all team-seasons played 81 or 82 games (a small number of 81s are recorded, not silently altered): {'min': {'2021-22': 81, '2022-23': 81, '2023-24': 81, '2024-25': 82, '2025-26': 81}, 'max': {'2021-22': 82, '2022-23': 82, '2023-24': 82, '2024-25': 82, '2025-26': 82}}",
+      "evidence": {
+        "gp_counts": {
+          "82": 28,
+          "81": 12
+        }
+      }
+    },
+    {
+      "check": "standings_point_math",
+      "dataset": "F",
+      "passed": true,
+      "detail": "points = 2*W + OTL for every historical team-season",
+      "evidence": {
+        "n_rows": 40
+      }
+    },
+    {
+      "check": "standings_rank_unique",
+      "dataset": "F",
+      "passed": true,
+      "detail": "division ranks 1-8 unique within each season",
+      "evidence": {
+        "ranks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "check": "no_2026_27_fitting_data",
+      "dataset": "G",
+      "passed": true,
+      "detail": "no 2026-27 game results exist anywhere in the processed data",
+      "evidence": {
+        "game_log_seasons": [
+          "2024-25",
+          "2025-26"
+        ],
+        "standings_seasons": [
+          "2021-22",
+          "2022-23",
+          "2023-24",
+          "2024-25",
+          "2025-26"
+        ]
+      }
+    },
+    {
+      "check": "roster_positions_valid",
+      "dataset": "G",
+      "passed": true,
+      "detail": "roster groups: ['D', 'F', 'G']",
+      "evidence": {
+        "n_players": 25
+      }
+    },
+    {
+      "check": "mandatory_fields_complete",
+      "dataset": "B",
+      "passed": true,
+      "detail": "no missing mandatory game-log values",
+      "evidence": {
+        "clean": true
+      }
+    },
+    {
+      "check": "cross_source_gamelog_reconcile",
+      "dataset": "cross-check",
+      "passed": true,
+      "detail": "Hockey-Reference SUM GF/GA = 279/226 matches cleaned log displayed sums 279/226; both differ from the official NHL team totals by the 6 shootout decision goals, which the official total excludes",
+      "evidence": {
+        "available": true,
+        "url": "https://www.hockey-reference.com/teams/DAL/2026_gamelog.html",
+        "hr_rows": 82,
+        "hr_sum_GF": 279.0,
+        "hr_sum_GA": 226.0,
+        "log_sum_GF_final_hockey": 273.0,
+        "log_sum_GA_final_hockey": 222.0,
+        "log_sum_GF_displayed": 279.0,
+        "log_sum_GA_displayed": 226.0,
+        "note": "Hockey-Reference game logs report final hockey scores; their GF/GA totals exclude the shootout decision increment."
+      }
+    }
+  ]
+}
