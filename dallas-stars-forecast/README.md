@@ -39,7 +39,6 @@ PyYAML, pytest, tabulate.
 
 ```bash
 # 1. Acquire and clean all source data (network; cached and resumable, safe to re-run)
-# 1. Acquire and clean all source data (network; cached and resumable, safe to re-run)
 uv run python -m stars_forecast collect-data
 
 # 2. Validate the datasets (exits nonzero if any check fails)
@@ -61,13 +60,30 @@ refuses to run if validation fails or an input file is missing.
 ### Rerun from local inputs only
 
 ```bash
-python -m stars_forecast validate-data && python -m stars_forecast run-all --n-seasons 10000 --seed 3315
+uv run python -m stars_forecast validate-data &&
+uv run python -m stars_forecast run-all --n-seasons 10000 --seed 3315
+```
+
+In Windows PowerShell, use:
+
+```powershell
+uv run python -m stars_forecast validate-data
+if ($LASTEXITCODE -eq 0) {
+    uv run python -m stars_forecast run-all --n-seasons 10000 --seed 3315
+}
 ```
 
 ### Use a different project root
 
 ```bash
-STARS_ROOT=/path/to/project python -m stars_forecast run-all
+STARS_ROOT=/path/to/project uv run python -m stars_forecast run-all
+```
+
+In Windows PowerShell, use:
+
+```powershell
+$env:STARS_ROOT = 'C:\path\to\project'
+uv run python -m stars_forecast run-all
 ```
 
 ## What the model does

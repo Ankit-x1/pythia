@@ -4,4 +4,5 @@ scipy>=1.10
 matplotlib>=3.7
 requests>=2.31
 PyYAML>=6.0
+lxml>=5.0
 tabulate>=0.9
