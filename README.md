@@ -13,22 +13,7 @@ A simple, honest forecast of how many standings points the **Dallas Stars** are 
 | [`dallas-stars-forecast/`](dallas-stars-forecast/) | The complete project — source code, data, model outputs, figures, tests and docs   |
 | [`graphify-out/`](graphify-out/)                   | Interactive graph of the codebase — open `graph.html` in a browser to explore it |
 
-## Quick start
-
-```bash
-cd dallas-stars-forecast
-
-# With uv (recommended)
-uv sync
-uv run python -m stars_forecast collect-data
-uv run python -m stars_forecast validate-data
-uv run python -m stars_forecast run-all --n-seasons 10000 --seed 3315
-uv run pytest
-```
-
-No uv? Use the pip fallback: `pip install -r dallas-stars-forecast/requirements.txt`
-
-## More detail
+## Detail
 
 - **Method in plain words:** last season's scoring rates (3.26 scored / 2.61 allowed per 60 min) are used to play the 82-game season 10,000 times per case across 18 scenarios — see [`dallas-stars-forecast/README.md`](dallas-stars-forecast/README.md) and `dallas-stars-forecast/docs/`.
 - **Verified:** All data checks, all tests passing, and a frozen backtest (forecast 106 vs actual 112 for 2025–26) with no re-tuning.
