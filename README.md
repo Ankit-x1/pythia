@@ -8,10 +8,9 @@ A simple, honest forecast of how many standings points the **Dallas Stars** are 
 
 ## What's in this repo
 
-| Folder                                              | Contents                                                                            |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [`dallas-stars-forecast/`](dallas-stars-forecast/) | The complete project — source code, data, model outputs, figures, tests and docs   |
-| [`graphify-out/`](graphify-out/)                   | Interactive graph of the codebase — open `graph.html` in a browser to explore it |
+| Folder                                              | Contents                                                                          |
+| --------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [`dallas-stars-forecast/`](dallas-stars-forecast/) | The complete project — source code, data, model outputs, figures, tests and docs |
 
 ## Detail
 
