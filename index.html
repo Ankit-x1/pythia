@@ -18,7 +18,7 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
 .metal{background:linear-gradient(100deg,#8a6d3b,#c9a86a 30%,#e8d193 50%,#b08d57 75%,#8a6d3b);-webkit-background-clip:text;background-clip:text;color:transparent}
 header{position:sticky;top:0;z-index:60;background:rgba(250,250,251,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{max-width:1160px;margin:auto;padding:15px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
-.logo{font-weight:900;letter-spacing:.24em;color:var(--ink);font-size:.95rem}.logo b{color:var(--gold)}
+.logo{font-weight:900;letter-spacing:.30em;color:var(--ink);font-size:1.55rem;line-height:1}.logo b{color:var(--gold)}
 nav{display:flex;gap:24px;flex-wrap:wrap}nav a{color:var(--ink2);font-size:.9rem}nav a:hover{color:var(--gold);text-decoration:none}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.93rem;border:1px solid var(--gold);color:#241a05;background:linear-gradient(180deg,#f7ecc9,#e3cb8f);cursor:pointer;box-shadow:0 6px 18px rgba(169,136,79,.25)}
 .btn:hover{text-decoration:none;filter:brightness(1.04)}
@@ -27,7 +27,7 @@ nav{display:flex;gap:24px;flex-wrap:wrap}nav a{color:var(--ink2);font-size:.9rem
 .hero{padding:84px 0 62px;border-bottom:1px solid var(--line);background:
  radial-gradient(900px 420px at 88% -5%,rgba(201,168,106,.20),transparent 60%),
  radial-gradient(760px 480px at -5% 105%,rgba(160,170,190,.25),transparent 55%)}
-.kicker{letter-spacing:.3em;font-size:.72rem;font-weight:800;color:var(--gold);text-transform:uppercase}
+.kicker{letter-spacing:.24em;font-size:1.08rem;font-weight:900;color:var(--gold);text-transform:uppercase}
 .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.03;letter-spacing:-.035em;color:var(--ink);margin:20px 0}
 .hero h1 .thin{font-weight:300;color:var(--ink2)}
 .hero p{max-width:660px;font-size:1.12rem;color:var(--mut)}
@@ -162,17 +162,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="card"><span class="tag">Limits</span><h3>What it cannot see</h3><p>Average opponents only · injuries/trades/schedules averaged out · tied-game rate from one season · Central view from 2021–22 → 2025–26.</p></div>
 </div>
 
-<h2 style="font-size:1.4rem;margin:52px 0 16px">Reproduce everything</h2>
-<pre id="cmds">cd dallas-stars-forecast
-uv sync
-uv run python -m stars_forecast collect-data
-uv run python -m stars_forecast validate-data
-uv run python -m stars_forecast run-all --n-seasons 10000 --seed 3315
-uv run pytest</pre>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
-<button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('cmds').innerText);this.textContent='Copied ✓'">Copy commands</button>
-<a class="btn ghost" href="https://github.com/Ankit-x1/pythia/tree/main/dallas-stars-forecast">Source code ↗</a>
-</div>
+<h2 style="font-size:1.4rem;margin:52px 0 16px">Reproducible by design</h2>
+<div class="read"><b>Fully reproducible —</b><p>The complete analysis is open and reproducible from the project repository: the data checks, model configuration, and automated tests are all included. Every case was simulated over 10,000 seasons using a fixed random seed (3315), so the same inputs produce the same results. If the underlying collected data changes, the forecasts may change with it — that is expected, and the repository records exactly which data was used.</p></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px"><a class="btn ghost" href="https://github.com/Ankit-x1/pythia/tree/main/dallas-stars-forecast">Explore the source code ↗</a></div>
 
 <h2 style="font-size:1.4rem;margin:52px 0 16px">Sources</h2>
 <ol class="refs">
@@ -180,8 +172,8 @@ uv run pytest</pre>
 <li>NHL Web API — schedule, gamecentre, standings, roster DAL 2026–27. Accessed 23 Oct 2026. [4–6]</li>
 <li>Dallas Stars Communications — initial 2026–27 roster announcement, 28 Sep 2026. [6]</li>
 <li>Hockey-Reference — Dallas game logs 2025–26 / 2024–25; NHL standings 2021–22 → 2025–26. [7–9]</li>
-<li>Team project files — data report (A–G), 188-file manifest, scenario config (seed 3315). [10]</li>
-<li>Dixon &amp; Coles (1997) JRSS A 160(3) [11] · Robert &amp; Casella (2004) Springer [12] — model &amp; simulation basis.</li>
+
+<li>Dixon &amp; Coles (1997) JRSS A 160(3) [10] · Robert &amp; Casella (2004) Springer [11] — model &amp; simulation basis.</li>
 </ol>
 </div></section>
 
