@@ -20,8 +20,7 @@ known 2025-26 season.
 | Backtest (2024-25 → 2025-26)                        | forecast 105.9 vs actual 112, error 6.1 pts, actual inside 80 % and 95 % intervals |
 
 Read `outputs/results-summary.md` for the full evidence summary, `docs/data-report.md` for the data
-report, and `docs/model-decisions.md` for every modelling choice (including one item awaiting
-instructor review).
+report, and `docs/model-decisions.md` for every modelling choice . These are just the generalized compressed version not the whole report.
 
 ## Install
 
