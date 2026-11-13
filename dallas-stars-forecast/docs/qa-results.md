@@ -1,7 +1,7 @@
 # QA results — Dallas Stars 2026-27 forecasting model
 
-Owner: Ankit Karki . Evidence in `outputs/qa/`. This document reports what was actually run
-and what it showed. The team must review and sign off separately.
+Evidence in `outputs/qa/`. This document reports what was actually run
+and what it showed. 
 
 ## 1. Commands run, and results
 
@@ -43,7 +43,7 @@ and what it showed. The team must review and sign off separately.
 | Standings + backtest + pipeline | 9                    | Threshold arithmetic, `>=` tie rule, exclusion of historical Dallas, train/evaluation separation, artifact consistency                                          |
 | Numerical spot checks           | 8 (inside the above) | Monte Carlo vs analytic expectation, monotonic sensitivity                                                                                                        |
 
-### 3.1 Independent numerical checks (not just internal consistency)
+### 3.1 Independent numerical checks 
 
 - **Analytic vs Monte Carlo.** An analytic expected-points calculation (truncated bivariate Poisson
   plus the tied-game adjustment) is compared to the simulated mean for all 18 scenarios:

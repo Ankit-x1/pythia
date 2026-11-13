@@ -5,7 +5,7 @@ Formulas use `lambda_GF` (Dallas goals per game) and `lambda_GA` (goals allowed 
 
 ---
 
-## 1. Regulation-based rates (needs instructor review)
+## 1. Regulation-based rates 
 
 The proposal defines `lambda_GF = 273/82 = 3.329` and `lambda_GA = 222/82 = 2.707` from official
 season totals, but calls the simulated goal counts *regulation* goals. Official season totals include
@@ -34,7 +34,7 @@ and the tied-game mechanism then adds overtime/shootout resolution. This is the 
 consistent choice: a Poisson draw represents 60 minutes, so its mean must be the 60-minute mean.
 Using 3.329 as a 60-minute mean would double-count overtime scoring.
 
-Both rate sets are reported side by side (`outputs/tables/diagnostics.json → proposal_rate_comparison`). 
+Both rate sets are reported side by side (`outputs/tables/diagnostics.json → proposal_rate_comparison`).
 
 ## 2. Three goal definitions are preserved, never merged
 

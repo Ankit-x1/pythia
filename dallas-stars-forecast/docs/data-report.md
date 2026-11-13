@@ -1,7 +1,5 @@
 # Dallas Stars 2026-27 Forecasting Project — Data Report
 
-_Generated 2026-10-24 05:11 UTC by `python -m stars_forecast data-report`._
-
 This report describes and validates the observed datasets used to fit the forecast model. It contains **no simulated results**; model outputs are reported separately in `outputs/results-summary.md` and the final academic report.
 
 ## 1. What this report covers
@@ -184,7 +182,7 @@ Third-place point totals by season (the threshold statistic):
 | 2024-25 | COL  |    102 |  0.621951 |
 | 2025-26 | MIN  |    104 |  0.634146 |
 
-## 10. Dataset G — Initial 2026-27 Dallas roster (scenario context only)
+## 10. Dataset G — Initial 2026-27 Dallas roster 
 
 25 players from the official roster endpoint (snapshot 2026-10-24): 15 forwards, 8 defensemen, 2 goalies. Fields: player id, name, position group and code, sweater number, handedness, height, weight, birth date, snapshot timestamp, source URL.
 
@@ -251,7 +249,7 @@ The proposal quoted 273 goals for, 222 goals against, a 50-20-12 record and 112 
 | Record        | 50-20-12 | 50-20-12                | Matches |
 | Points        | 112      | 112                     | Matches |
 
-The independent verification agrees with the proposal, so no discrepancy needs to be documented for these four values. One *convention* issue does not disappear because the numbers agree: 273/82 and 222/82 include overtime goals, so they are final-hockey rates and not 60-minute regulation rates. The simulation is regulation-based, so it uses the regulation means and both versions are reported side by side in `outputs/tables/diagnostics.json`. 
+The independent verification agrees with the proposal, so no discrepancy needs to be documented for these four values. One *convention* issue does not disappear because the numbers agree: 273/82 and 222/82 include overtime goals, so they are final-hockey rates and not 60-minute regulation rates. The simulation is regulation-based, so it uses the regulation means and both versions are reported side by side in `outputs/tables/diagnostics.json`.
 
 ## 14. Known data limitations
 
